@@ -1,0 +1,19 @@
+// リスト作成画面css
+
+.listnewPage {
+  .new_list {
+    max-width: 500px;
+    margin: 100px auto 0;
+  }
+}
+
+// カードデザイン
+.cardnewPgae {
+  .cardnewForm {
+    max-width: 500px;
+    margin: 70px auto 0;
+    &_title {
+      margin-bottom: 30px;
+    }
+  }
+}

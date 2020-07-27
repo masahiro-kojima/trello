@@ -1,0 +1,30 @@
+<!--詳細ビュー-->
+<div class='carddetailPage'>
+  <div class="container">
+    <div class="cardContents">
+      <div class="cardContents_title">
+<!--カードタイトル-->
+        <div>タイトル</div>
+        <h2><%= @card.title %></h2>
+      </div>
+<!--カードメモ-->
+      <div class="cardContents_memo">
+        <div>メモ</div>
+        <div><%= @card.memo %></div>
+      </div>
+<!--カードリスト名-->
+      <div class="cardContents_listStatus">
+        <div>リスト名</div>
+        <div><%= @card.list.title %></div>
+      </div>
+<!--カード編集-->
+      <div class="cardContents_btnArea">
+        <%= link_to '編集する', edit_list_card_path(@card.list, @card), class: "edit_btn" %>
+      </div>
+<!--カード消去-->
+        <%= link_to '削除をする', list_card_path(@card.list, @card), class: "text-danger delete_btn", method: :delete, data: { confirm: "このカードを削除して大丈夫ですか?" } %>
+
+
+    </div>
+  </div>
+</div>
